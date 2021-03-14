@@ -17,6 +17,7 @@ if cmp(a, b) returns  0, then a == b.
 import random
 import copy
 
+
 def cmp_standard(a, b):
     '''
     used for sorting from lowest to highest
@@ -153,7 +154,7 @@ def quick_sorted(xs, cmp=cmp_standard):
     split the list.
     Instead of splitting the list down
     the middle,
-    a "pivot" value is randomly selected, 
+    a "pivot" value is randomly selected,
     and the list is split into a "less than"
     sublist and a "greater than" sublist.
 
@@ -163,7 +164,7 @@ def quick_sorted(xs, cmp=cmp_standard):
             it is sorted, so return xs
         else
             select a pivot value p
-            put all the values less than p 
+            put all the values less than p
             in a list
             put all the values greater than
             p in a list
@@ -249,6 +250,7 @@ def quick_sort(xs, cmp=cmp_standard):
             array[i + 1] = array[hi]
             array[hi] = temp
             return i + 1
+
     def _quicksort(array, lo, hi):
         if lo < hi:
             p = _partition(array, lo, hi)
